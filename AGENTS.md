@@ -171,11 +171,8 @@ See `docs/contributor/contributing.md` (§ DCO Sign-off) and `docs/contributor/g
 **Location:** `src/components/`
 
 - `button.js` - Custom button component
-- `featuresList.js` - Features display
 - `gitHubButton.js` - GitHub integration button
-- `whatIs.js` - "What is HAMi" content component
-- `adoptersList.js` - Adopters list (data from `src/data/adopters.json`)
-- `caseStudiesList.js` - Case studies listing
+- `logoWall.js` - Logo wall for adopters and ecosystem (data from `src/data/adopters.json`)
 - `contributorsList.js` - Contributors display
 - `BeforeAfterComparison.js` - Before/after image comparison widget
 
@@ -205,7 +202,6 @@ See `docs/contributor/contributing.md` (§ DCO Sign-off) and `docs/contributor/g
 
 - `img/` - Images (logos, diagrams, screenshots)
 - `favicons/` - Website favicons in multiple sizes
-- `CNAME` - Custom domain record for project-hami.io
 
 ## Key Patterns
 
@@ -352,7 +348,7 @@ The changelog plugin (`src/plugins/changelog/index.js`) is a customized Docusaur
 ### Hosting
 
 - **Production:** Netlify (configured in `netlify.toml`)
-- **Custom domain:** project-hami.io (via `static/CNAME`)
+- **Custom domain:** project-hami.io (DNS managed in Netlify)
 - **Build command:** `npm run build`
 - **Node version:** 20
 

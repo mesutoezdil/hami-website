@@ -1,0 +1,111 @@
+header:
+  schema-version: 2.2.0
+  last-updated: "2026-07-30"
+  last-reviewed: "2026-07-30"
+  url: https://raw.githubusercontent.com/Project-HAMi/website/master/security-insights.yml
+  comment: Security insights for the HAMi documentation website repository.
+
+project:
+  name: HAMi
+  homepage: https://project-hami.io
+  administrators:
+    - name: archlitchi
+      affiliation: Project HAMi
+      social: https://github.com/archlitchi
+      primary: true
+    - name: wawa0210
+      affiliation: Project HAMi
+      social: https://github.com/wawa0210
+      primary: false
+  repositories:
+    - name: HAMi
+      url: https://github.com/Project-HAMi/HAMi
+      comment: Core HAMi scheduler and device virtualization middleware.
+    - name: HAMi-core
+      url: https://github.com/Project-HAMi/HAMi-core
+      comment: In-container GPU resource controller (libvgpu).
+    - name: HAMi-WebUI
+      url: https://github.com/Project-HAMi/HAMi-WebUI
+      comment: Web dashboard for HAMi clusters.
+    - name: website
+      url: https://github.com/Project-HAMi/website
+      comment: This repository, the documentation website at project-hami.io.
+    - name: ascend-device-plugin
+      url: https://github.com/Project-HAMi/ascend-device-plugin
+      comment: Device plugin for Ascend NPUs.
+    - name: volcano-vgpu-device-plugin
+      url: https://github.com/Project-HAMi/volcano-vgpu-device-plugin
+      comment: vGPU device plugin for the Volcano scheduler.
+    - name: community
+      url: https://github.com/Project-HAMi/community
+      comment: Governance and community documents. The full list of subproject repositories is at https://github.com/orgs/Project-HAMi/repositories.
+  documentation:
+    detailed-guide: https://project-hami.io/docs
+    quickstart-guide: https://project-hami.io/docs/get-started/deploy-with-helm
+    code-of-conduct: https://github.com/Project-HAMi/HAMi/blob/master/CODE_OF_CONDUCT.md
+  vulnerability-reporting:
+    reports-accepted: true
+    bug-bounty-available: false
+    policy: https://github.com/Project-HAMi/HAMi/blob/master/SECURITY.md
+    contact:
+      name: archlitchi
+      affiliation: Project HAMi
+      social: https://github.com/archlitchi
+      primary: true
+    comment: Report vulnerabilities privately through GitHub Security Advisories on the affected repository.
+
+repository:
+  url: https://github.com/Project-HAMi/website
+  status: active
+  accepts-change-request: true
+  accepts-automated-change-request: true
+  core-team:
+    - name: archlitchi
+      affiliation: Project HAMi
+      social: https://github.com/archlitchi
+      primary: true
+    - name: wawa0210
+      affiliation: Project HAMi
+      social: https://github.com/wawa0210
+      primary: false
+    - name: windsonsea
+      affiliation: Project HAMi
+      social: https://github.com/windsonsea
+      primary: false
+  documentation:
+    contributing-guide: https://github.com/Project-HAMi/website/blob/master/CONTRIBUTING.md
+  license:
+    url: https://github.com/Project-HAMi/website/blob/master/LICENSE
+    expression: CC-BY-4.0
+  security:
+    assessments:
+      self:
+        comment: Static documentation site built with Docusaurus and deployed via Netlify. No user data is collected or stored by this repository. Dependencies are updated through maintenance pull requests driven by npm audit.
+    champions:
+      - name: archlitchi
+        affiliation: Project HAMi
+        social: https://github.com/archlitchi
+        primary: true
+      - name: wawa0210
+        affiliation: Project HAMi
+        social: https://github.com/wawa0210
+        primary: false
+    tools:
+      - name: GitHub secret scanning
+        type: secret-scanning
+        rulesets:
+          - default
+        integration:
+          adhoc: true
+          ci: false
+          release: false
+        comment: Secret scanning and push protection are both enabled on the repository. Push protection blocks a push that contains a known secret pattern before it reaches the branch.
+      - name: Dependabot
+        type: SCA
+        rulesets:
+          - default
+        integration:
+          adhoc: true
+          ci: false
+          release: false
+        comment: Version updates are configured in .github/dependabot.yml and security updates are enabled, so advisories against the npm lockfile open a pull request automatically.

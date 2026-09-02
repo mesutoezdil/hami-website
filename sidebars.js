@@ -49,6 +49,7 @@ module.exports = {
       },
       items: [
         "installation/prerequisites",
+        "installation/configure-cdi",
         "installation/online-installation",
         "installation/offline-installation",
         "installation/upgrade",
@@ -191,6 +192,19 @@ module.exports = {
           type: "category",
           label: "Share Enflame GCU devices",
           items: ["userguide/enflame-device/enable-enflame-gcu-sharing"],
+        },
+        {
+          type: "category",
+          label: "Share AMD GPU devices",
+          items: [
+            "userguide/amd-device/enable-amd-gpu-sharing",
+            {
+              type: "category",
+              label: "Examples",
+              key: "amd-examples",
+              items: ["userguide/amd-device/examples/allocate-core-and-memory"],
+            },
+          ],
         },
         {
           type: "category",
