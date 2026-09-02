@@ -22,7 +22,7 @@ HAMi 有不止一种形态，旁边还有另外两个项目。本页回答大家
 | --- | --- | --- |
 | Kubernetes | v1.23 或更高 | v1.34 或更高，需开启特性门控 |
 | 设备如何到达 Pod | Device Plugin | 通过 mutating webhook 生成 ResourceClaim |
-| Pod spec | `nvidia.com/gpu` 与 `nvidia.com/gpumem` limits | 写法相同，自动转换为 ResourceClaim |
+| Pod spec | `nvidia.com/gpu`、`nvidia.com/gpumem` 与 `nvidia.com/gpucores` limits | 写法相同，自动转换为 ResourceClaim |
 | CDI | 不需要 | 需要 |
 | 额外组件 | 无 | cert-manager |
 
@@ -46,7 +46,7 @@ HAMi 有不止一种形态，旁边还有另外两个项目。本页回答大家
 | 隔离 | HAMi-core | HAMi-core | HAMi-core，通过 kai-resource-isolator |
 | 是否还要装 HAMi | 不适用 | 否 | 否 |
 | Gang 调度与队列 | 否 | 是 | 是 |
-| 非 NVIDIA 设备 | 支持，见 [HAMi 支持的设备](../userguide/device-supported.md) | NVIDIA 与 Ascend | NVIDIA |
+| 非 NVIDIA 设备 | 支持，见 [HAMi 支持的设备](../userguide/device-supported.md) | 仅 NVIDIA，Ascend 走独立的 [Volcano vNPU](../installation/how-to-use-volcano-ascend.md) 集成 | NVIDIA |
 | 版本要求 | HAMi v2.x | Volcano v1.9 或更高 | KAI v0.16.4 或更高 |
 | 指南 | [使用 Helm 部署 HAMi](./deploy-with-helm.md) | [使用 Volcano vGPU](../userguide/volcano-vgpu/nvidia-gpu/how-to-use-volcano-vgpu.md) | [配合 HAMi 使用 KAI Scheduler](../userguide/kai-scheduler/how-to-use-kai-scheduler.md) |
 
