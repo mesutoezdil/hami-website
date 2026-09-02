@@ -2,40 +2,12 @@ module.exports = {
   docs: [
     {
       type: "category",
-      label: "Core Concepts",
+      label: "Get started",
       collapsed: false,
       link: {
         type: "generated-index",
-        title: "Core Concepts",
-        description: "Learn what HAMi is and how the core architecture works.",
-      },
-      items: [
-        "core-concepts/introduction",
-        "core-concepts/gpu-virtualization",
-        "core-concepts/architecture",
-        "core-concepts/gpu-stack",
-        "core-concepts/gpu-driver",
-        "core-concepts/hami-architecture",
-        "core-concepts/ecosystem-integrations",
-      ],
-    },
-    {
-      type: "category",
-      label: "Key Features",
-      link: {
-        type: "generated-index",
-        title: "Key Features",
-        description: "Explore the most important capabilities in HAMi.",
-      },
-      items: ["key-features/device-sharing", "key-features/device-resource-isolation"],
-    },
-    {
-      type: "category",
-      label: "Get Started",
-      link: {
-        type: "generated-index",
-        title: "Get Started",
-        description: "Install and run HAMi quickly with a guided first deployment path.",
+        title: "Get started",
+        description: "Choose a setup, install HAMi and run a first shared GPU workload.",
       },
       items: [
         "get-started/choose-your-setup",
@@ -45,50 +17,91 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Installation",
+      label: "Introduction",
+      collapsed: true,
       link: {
         type: "generated-index",
-        title: "Installation",
-        description: "Installation methods, prerequisites, upgrades and integrations.",
+        title: "Introduction",
+        description: "What HAMi is and what it does for you.",
       },
       items: [
-        "installation/prerequisites",
-        "installation/configure-cdi",
-        "installation/online-installation",
-        "installation/offline-installation",
-        "installation/upgrade",
-        "installation/uninstall",
-        "installation/webui-installation",
-        "installation/aws-installation",
-        "installation/how-to-use-hami-dra",
-        "installation/how-to-use-volcano-vgpu",
-        "installation/how-to-use-volcano-ascend",
+        "core-concepts/introduction",
+        "key-features/device-sharing",
+        "key-features/device-resource-isolation",
       ],
     },
     {
       type: "category",
-      label: "User Guide",
+      label: "Install",
+      collapsed: true,
       link: {
         type: "generated-index",
-        title: "User Guide",
-        description:
-          "Configure devices, request resources, monitor workloads and troubleshoot usage.",
+        title: "Install",
+        description: "Install HAMi, or one of the approaches built on it.",
       },
       items: [
-        "userguide/configure",
-        "userguide/device-supported",
-        "userguide/benchmark",
-        "userguide/hami-webui-user-guide",
         {
           type: "category",
-          label: "Monitoring",
+          label: "HAMi",
           items: [
-            "userguide/monitoring/device-allocation",
-            "userguide/monitoring/real-time-usage",
-            "userguide/monitoring/real-time-device-usage",
-            "userguide/monitoring/grafana-dashboard",
+            "installation/prerequisites",
+            "installation/online-installation",
+            "installation/offline-installation",
+            "installation/upgrade",
+            "installation/uninstall",
+            "installation/webui-installation",
+            "installation/aws-installation",
           ],
         },
+        {
+          type: "category",
+          label: "HAMi-DRA",
+          items: ["installation/configure-cdi", "installation/how-to-use-hami-dra"],
+        },
+        {
+          type: "category",
+          label: "Volcano-HAMi",
+          items: [
+            "installation/how-to-use-volcano-vgpu",
+            "installation/how-to-use-volcano-ascend",
+            {
+              type: "category",
+              label: "NVIDIA GPU",
+              items: [
+                "userguide/volcano-vgpu/nvidia-gpu/how-to-use-volcano-vgpu",
+                "userguide/volcano-vgpu/nvidia-gpu/monitor",
+                {
+                  type: "category",
+                  label: "Examples",
+                  key: "volcano-vgpu-examples",
+                  items: [
+                    "userguide/volcano-vgpu/nvidia-gpu/examples/default-use",
+                    "userguide/volcano-vgpu/nvidia-gpu/examples/use-exclusive-gpu",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "KAI-scheduler-HAMi",
+          items: ["userguide/kai-scheduler/how-to-use-kai-scheduler"],
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Vendor guides",
+      collapsed: true,
+      link: {
+        type: "generated-index",
+        title: "Vendor guides",
+        description:
+          "Start from the supported devices matrix, then follow the guide for your vendor.",
+      },
+      items: [
+        "userguide/device-supported",
         {
           type: "category",
           label: "Share NVIDIA GPU devices",
@@ -330,64 +343,64 @@ module.exports = {
             },
           ],
         },
-        {
-          type: "category",
-          label: "Scheduler Integrations",
-          items: [
-            {
-              type: "category",
-              label: "Volcano vGPU",
-              items: [
-                {
-                  type: "category",
-                  label: "NVIDIA GPU",
-                  items: [
-                    "userguide/volcano-vgpu/nvidia-gpu/how-to-use-volcano-vgpu",
-                    "userguide/volcano-vgpu/nvidia-gpu/monitor",
-                    {
-                      type: "category",
-                      label: "Examples",
-                      key: "volcano-vgpu-examples",
-                      items: [
-                        "userguide/volcano-vgpu/nvidia-gpu/examples/default-use",
-                        "userguide/volcano-vgpu/nvidia-gpu/examples/use-exclusive-gpu",
-                      ],
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              type: "category",
-              label: "Using HAMi with Kueue",
-              items: [
-                "userguide/kueue/how-to-use-kueue",
-                {
-                  type: "category",
-                  label: "Examples",
-                  key: "kueue-examples",
-                  items: ["userguide/kueue/examples/default-use"],
-                },
-              ],
-            },
-            {
-              type: "category",
-              label: "Using HAMi with KAI Scheduler",
-              items: ["userguide/kai-scheduler/how-to-use-kai-scheduler"],
-            },
-          ],
-        },
       ],
     },
     {
       type: "category",
-      label: "Developer Guide",
+      label: "Operate",
+      collapsed: true,
       link: {
         type: "generated-index",
-        title: "Developer Guide",
-        description: "Architecture deep dive, build workflow and scheduler internals.",
+        title: "Operate",
+        description: "Configure, monitor, queue and troubleshoot a running cluster.",
       },
       items: [
+        "userguide/configure",
+        {
+          type: "category",
+          label: "Monitoring",
+          items: [
+            "userguide/monitoring/device-allocation",
+            "userguide/monitoring/real-time-usage",
+            "userguide/monitoring/real-time-device-usage",
+            "userguide/monitoring/grafana-dashboard",
+          ],
+        },
+        "userguide/benchmark",
+        "userguide/hami-webui-user-guide",
+        {
+          type: "category",
+          label: "Using HAMi with Kueue",
+          items: [
+            "userguide/kueue/how-to-use-kueue",
+            {
+              type: "category",
+              label: "Examples",
+              key: "kueue-examples",
+              items: ["userguide/kueue/examples/default-use"],
+            },
+          ],
+        },
+        "troubleshooting/troubleshooting",
+        "faq/faq",
+      ],
+    },
+    {
+      type: "category",
+      label: "Design and develop",
+      collapsed: true,
+      link: {
+        type: "generated-index",
+        title: "Design and develop",
+        description: "Architecture, GPU internals, build and scheduler design.",
+      },
+      items: [
+        "core-concepts/gpu-virtualization",
+        "core-concepts/architecture",
+        "core-concepts/hami-architecture",
+        "core-concepts/gpu-stack",
+        "core-concepts/gpu-driver",
+        "core-concepts/ecosystem-integrations",
         "developers/build",
         "developers/protocol",
         "developers/scheduling",
@@ -421,14 +434,6 @@ module.exports = {
         "contributor/roadmap",
         "contributor/e2e-testing",
       ],
-    },
-    {
-      type: "doc",
-      id: "troubleshooting/troubleshooting",
-    },
-    {
-      type: "doc",
-      id: "faq/faq",
     },
   ],
 };
