@@ -3,7 +3,7 @@ title: HAMi 支持的设备
 translated: true
 ---
 
-下表列出了 HAMi 支持的设备。本表反映的是 HAMi 最新发布版本 v2.9.0。
+下表列出了 HAMi 支持的设备。本表反映的是 HAMi 最新发布版本 v2.10.0。
 
 <!-- prettier-ignore -->
 | 设备类型 | 制造商                    | 支持型号                | 状态   | 显存隔离 | 核心隔离 | 多卡支持 |
@@ -20,7 +20,7 @@ translated: true
 | GPU      | 瀚博（Vastai）            | VA16                    | 稳定   | 是       | 是       | 否       |
 | GPU      | AMD                       | Instinct / ROCm         | 稳定   | 是       | 是       | 否       |
 | Neuron   | AWS                       | Inf、Trn                | 稳定   | 否       | 否       | 是       |
-| GPU      | 壁仞（Biren）             | Biren166M               | 实验性 | 是       | 是       | 否       |
+| GPU      | 壁仞（Biren）             | Biren166M               | 稳定   | 是       | 是       | 否       |
 | DPU      | 太初元碁（Teco）          | 检查中                  | 验证中 | 否       | 否       | 否       |
 
 支持状态：

@@ -2,7 +2,7 @@
 title: Device supported by HAMi
 ---
 
-The table below lists the devices supported by HAMi. This matrix reflects HAMi v2.9.0, the latest released version.
+The table below lists the devices supported by HAMi. This matrix reflects HAMi v2.10.0, the latest released version.
 
 <!-- prettier-ignore -->
 | Type   | Manufacturer  | Models                  | Status           | MemoryIsolation | CoreIsolation | MultiCard Support |
@@ -19,7 +19,7 @@ The table below lists the devices supported by HAMi. This matrix reflects HAMi v
 | GPU    | Vastai        | VA16                    | Stable           | Yes             | Yes           | No                |
 | GPU    | AMD           | Instinct / ROCm         | Stable           | Yes             | Yes           | No                |
 | Neuron | AWS           | Inf, Trn                | Stable           | No              | No            | Yes               |
-| GPU    | Biren         | Biren166M               | Experimental     | Yes             | Yes           | No                |
+| GPU    | Biren         | Biren166M               | Stable           | Yes             | Yes           | No                |
 | DPU    | Teco          | Checking                | Under Validation | No              | No            | No                |
 
 Support status:
