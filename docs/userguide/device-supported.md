@@ -15,11 +15,11 @@ The table below lists the devices supported by HAMi. This matrix reflects HAMi v
 | GPU    | Mthreads      | MTT S4000               | Stable           | Yes             | Yes           | No                |
 | GPU    | MetaX         | MXC500                  | Stable           | Yes             | Yes           | No                |
 | GCU    | Enflame       | S60                     | Stable           | Yes             | Yes           | No                |
-| XPU    | Kunlunxin     | P800                    | Stable           | Yes             | Yes           | No                |
-| GPU    | Vastai        | VA16                    | Stable           | Yes             | Yes           | No                |
+| XPU    | Kunlunxin     | P800                    | Stable           | Yes             | No            | No                |
+| GPU    | Vastai        | VA16                    | Stable           | No              | No            | No                |
 | GPU    | AMD           | Instinct / ROCm         | Stable           | Yes             | Yes           | No                |
-| Neuron | AWS           | Inf, Trn                | Stable           | No              | No            | Yes               |
-| GPU    | Biren         | Biren166M               | Stable           | Yes             | Yes           | No                |
+| Neuron | AWS           | Inf, Trn                | Stable           | No              | Yes           | Yes               |
+| GPU    | Biren         | Biren166M               | Stable           | No              | No            | No                |
 | DPU    | Teco          | Checking                | Under Validation | No              | No            | No                |
 
 Support status:

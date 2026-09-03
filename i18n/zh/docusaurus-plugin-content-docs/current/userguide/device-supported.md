@@ -16,11 +16,11 @@ translated: true
 | GPU      | 摩尔线程（Mthreads）      | MTT S4000               | 稳定   | 是       | 是       | 否       |
 | GPU      | 沐曦（MetaX）             | MXC500                  | 稳定   | 是       | 是       | 否       |
 | GCU      | 燧原科技（Enflame）       | S60                     | 稳定   | 是       | 是       | 否       |
-| XPU      | 昆仑芯（Kunlunxin）       | P800                    | 稳定   | 是       | 是       | 否       |
-| GPU      | 瀚博（Vastai）            | VA16                    | 稳定   | 是       | 是       | 否       |
+| XPU      | 昆仑芯（Kunlunxin）       | P800                    | 稳定   | 是       | 否       | 否       |
+| GPU      | 瀚博（Vastai）            | VA16                    | 稳定   | 否       | 否       | 否       |
 | GPU      | AMD                       | Instinct / ROCm         | 稳定   | 是       | 是       | 否       |
-| Neuron   | AWS                       | Inf、Trn                | 稳定   | 否       | 否       | 是       |
-| GPU      | 壁仞（Biren）             | Biren166M               | 稳定   | 是       | 是       | 否       |
+| Neuron   | AWS                       | Inf、Trn                | 稳定   | 否       | 是       | 是       |
+| GPU      | 壁仞（Biren）             | Biren166M               | 稳定   | 否       | 否       | 否       |
 | DPU      | 太初元碁（Teco）          | 检查中                  | 验证中 | 否       | 否       | 否       |
 
 支持状态：
