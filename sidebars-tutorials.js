@@ -81,6 +81,11 @@ module.exports = {
           id: "labs/composable-scheduler-policies-gke",
           customProps: { level: "Intermediate", duration: "about 60 minutes" },
         },
+        {
+          type: "doc",
+          id: "labs/hami-sglang",
+          customProps: { level: "Intermediate", duration: "about 45 minutes" },
+        },
       ],
     },
   ],
